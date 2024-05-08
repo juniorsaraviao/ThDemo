@@ -1,0 +1,7 @@
+{
+  "name": "ThDemo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
