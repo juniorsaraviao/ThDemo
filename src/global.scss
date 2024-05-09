@@ -66,3 +66,7 @@ ion-card {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.top-safe-area {
+  margin-top: env(safe-area-inset-top);
+}
