@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="android">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">{{pokemonResult.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="card-container">
+    <ion-card *ngIf="showCard">
+      <div class="image-container">
+        <img [src]="pokemonResponse!.id | imgUrl" />
+      </div>
+      <ion-card-header>
+        <ion-card-title class="ion-text-capitalize">{{ pokemonResponse!.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card-subtitle class="ion-text-capitalize">DETAILS</ion-card-subtitle>
+        <p><b>Height:</b> {{ pokemonResponse!.height / 10 }} mts</p> <!-- The height of this Pokemon in decimetres which is converted into metres by dividing by 10 -->
+        <p><b>Weight:</b> {{ pokemonResponse!.weight / 10 }} kg</p> <!-- The weight of this Pokemon in hectograms which is converted into kilograms by dividing by 10 -->
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
