@@ -26,7 +26,7 @@ export class PokemonDetailPage {
       this.route.queryParams.subscribe(params => {
         if (this?.router?.getCurrentNavigation()?.extras.state) {
           this.pokemonResult = this?.router?.getCurrentNavigation()?.extras?.state?.['pokemonResult'];
-          console.log('url', JSON.stringify(this.pokemonResult));
+          console.log('pokemonResult', JSON.stringify(this.pokemonResult));
         }
       });
   }
