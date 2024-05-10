@@ -27,7 +27,6 @@ export class HomePage {
 
     this.loadPokemonService.loadPokemonList().pipe(
       switchMap(async (response: ResultResponse) => {
-        debugger;
         this.pokemonList = response.results;
         await this.loadingService.hideLoading();
         return of(true);
